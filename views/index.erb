@@ -1,0 +1,16 @@
+
+<section>
+<%= erb :item_new %> 
+</section>
+
+
+<% @items.each do |item| %>
+<article>
+	<h2> <a href="/items/<%= item.id %>"> <%= item.title %> </a> 
+	<% if item.is_done %>
+		<small>DONE!</small>
+	<% end %> 
+	</h2>
+
+</article>
+<% end %>
